@@ -1,5 +1,6 @@
-/* light or dark clock */
-body {
+:root {
+  /* light or dark clock */
+
   /* dark clock */
   --colorbkg: black;
   --colordig: #ffffff7d;
@@ -13,10 +14,9 @@ body {
   --colorsec1: #00000045;
   --opacity: 0.6;
   --filter: saturate(100%); */
-}
+/*-----------------------------------*/
+  /* clock color palette */
 
-/* clock color palette */
-body {
   /* original day clock */
   /* --colorh: #8a8a8a;
   --colorm: #0000FF;
@@ -37,6 +37,10 @@ body {
   --colorm: #6cad9a;
   --colors: #96c581;
 
+}
+
+#colorform {
+  color: #a8a8a8;
 }
 
 div.clock_container {
