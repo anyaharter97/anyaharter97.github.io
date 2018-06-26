@@ -47,14 +47,11 @@ div.clock_container {
   align-items: center;
   align-content: center;
 }
-div.clock {
-  width:225px;
-  height:225px;
-  position:relative;
-  margin-left: 225px;
-  margin-top: 225px;
+#clock {
+  width:450px;
+  height:450px;
 }
-div.dig, div.center, div.hour, div.min, div.sec {
+div.dig, div#center, div.hour, div.min, div.sec {
     position:absolute;
 }
 div.hour, div.min, div.sec {
@@ -96,8 +93,6 @@ div.sec {
   width: 6px;
   height: 6px;
   font-size: 6px;
-  top: 0px;
-  left: 0px;
   margin: 0px;
 }
 #sec1 {

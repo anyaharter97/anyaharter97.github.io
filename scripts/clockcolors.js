@@ -1,5 +1,18 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+  document.getElementById("colorform").style.display = "none";
+
+  document.getElementById("myBtn2").addEventListener("click", showColorForm);
+
+  function showColorForm() {
+    var colorform = document.getElementById("colorform");
+    if (colorform.style.display === "none") {
+        colorform.style.display = "block";
+    } else {
+        colorform.style.display = "none";
+    }
+  }
+
   var hour = document.getElementById("hourinput");
   var min = document.getElementById("mininput");
   var sec = document.getElementById("secinput");

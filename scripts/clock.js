@@ -5,8 +5,8 @@ var M='..........';
 var M=M.split('');
 var S='............';
 var S=S.split('');
-var Ypos=0;
-var Xpos=0;
+var Ypos=225;
+var Xpos=225;
 var Ybase=32;
 var Xbase=32;
 var dots=12;
@@ -19,9 +19,11 @@ function clock(){
   var min=-1.57 + Math.PI * mins/30;
   var hr=time.getHours();
   var hrs=-1.57 + Math.PI * hr/6 + Math.PI*parseInt(mins)/360;
+  document.getElementById("center").style.top=Ypos + "px";
+  document.getElementById("center").style.left=Xpos + "px";
   for (i=0; i < dots; ++i){
-    document.getElementById("dig" + (i+1)).style.top=0-15+160*Math.sin(-0.49+dots+i/1.9).toString() + "px";
-    document.getElementById("dig" + (i+1)).style.left=0-14+160*Math.cos(-0.49+dots+i/1.9).toString() + "px";
+    document.getElementById("dig" + (i+1)).style.top=Ypos-15+160*Math.sin(-0.49+dots+i/1.9).toString() + "px";
+    document.getElementById("dig" + (i+1)).style.left=Xpos-14+160*Math.cos(-0.49+dots+i/1.9).toString() + "px";
   }
   for (i=0; i < S.length; i++){
     document.getElementById("sec" + (i+1)).style.top =Ypos+i*Ybase*Math.sin(sec).toString()/2.5 + "px";
