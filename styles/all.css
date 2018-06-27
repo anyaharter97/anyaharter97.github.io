@@ -2,18 +2,14 @@
   /* light or dark clock */
 
   /* dark clock */
-  --colorbkg: black;
-  --colordig: #ffffff7d;
-  --colorsec1: #ffffff6e;
+  /* --colorbkg: black;
   --opacity: 0.5;
-  --filter: saturate(80%) brightness(140%);
+  --filter: saturate(80%) brightness(140%); */
 
   /* light clock */
-  /* --colorbkg: white;
-  --colordig: #00000054;
-  --colorsec1: #00000045;
+  --colorbkg: white;
   --opacity: 0.6;
-  --filter: saturate(100%); */
+  --filter: saturate(100%);
 /*-----------------------------------*/
   /* clock color palette */
 
@@ -40,38 +36,60 @@
 }
 
 #colorform {
-  color: #a8a8a8;
+  color: #959595;
 }
-
+#menu {
+  margin-top: 25px;
+}
 div.clock_container {
   align-items: center;
   align-content: center;
+  width:400px;
+  height:400px;
+  /* display: inline-block; */
+  float:left;
 }
 #clock {
-  width:450px;
-  height:450px;
+  width:400px;
+  height:400px;
+  position:relative;
+}
+#menutoggle {
+  position:absolute;
+  top:25px;
+  left:375px;
+}
+#lighttoggle {
+  position:absolute;
+  top:60px;
+  left:375px;
+}
+#darktoggle {
+  position:absolute;
+  top:60px;
+  left:375px;
 }
 div.dig, div#center, div.hour, div.min, div.sec {
-    position:absolute;
+  position:absolute;
 }
 div.hour, div.min, div.sec {
-    width:5px;
-    height:5px;
-    font-size:5px;
+  width:5px;
+  height:5px;
+  font-size:5px;
 }
 div.dig {
-    width:30px;
-    height:30px;
-    font-family:arial,verdana,sans-serif;
-    font-size:36px;
-    text-align:center;
-    padding-top:10px
+  width:30px;
+  height:30px;
+  font-family:arial,verdana,sans-serif;
+  font-size:36px;
+  text-align:center;
+  padding-top:10px
 }
 body {
   background-color: var(--colorbkg);
 }
 div.dig {
-  color: var(--colordig);
+  color: #959595;
 }
 div.hour {
   background: var(--colorh);
@@ -89,7 +107,7 @@ div.sec {
   filter: var(--filter);
 }
 #center {
-  background: var(--colorsec1);
+  background: #959595;
   width: 6px;
   height: 6px;
   font-size: 6px;
