@@ -2,13 +2,13 @@
   /* light or dark clock */
 
   /* dark clock */
-  /* --colorbkg: black;
+  /* --colorbkg: #000000ff;
   --colordig: #ffffff7d;
   --opacity: 0.5;
   --filter: saturate(80%) brightness(140%); */
 
   /* light clock */
-  --colorbkg: white;
+  --colorbkg: #00000000;
   --colordig: #00000054;
   --opacity: 0.6;
   --filter: saturate(100%);
@@ -37,12 +37,42 @@
 
 }
 
+input[type="range"] {
+   /* position: absolute; */
+   /* top: 40%; */
+   transform: rotate(180deg);
+}
+#brightness {
+  position:relative;
+  /* top:-20px; */
+  /* margin-left: 15px; */
+  float:left;
+}
+#lighttoggle {
+  position:relative;
+  /* top:-20px; */
+  /* left:375px; */
+  float:left;
+  margin-right: 10px;
+}
+#darktoggle {
+  position:relative;
+  /* top:-20px; */
+  /* left:375px; */
+  float:left;
+  margin-right: 10px;
+}
 #colorform {
   color: #959595;
-  margin-left: 15px;
+  margin-left: 35px;
 }
 #menu {
-  margin-top: 25px;
+  margin-top: 45px;
+}
+#menutoggle {
+  position: absolute;
+  top:450px;
+  left:8px;
 }
 div.clock_container {
   align-items: center;
@@ -50,27 +80,12 @@ div.clock_container {
   width:400px;
   height:400px;
   /* display: inline-block; */
-  float:left;
+  /* float:left; */
 }
 #clock {
   width:400px;
   height:400px;
   position:relative;
-}
-#menutoggle {
-  position:absolute;
-  top:25px;
-  left:375px;
-}
-#lighttoggle {
-  position:absolute;
-  top:60px;
-  left:375px;
-}
-#darktoggle {
-  position:absolute;
-  top:60px;
-  left:375px;
 }
 div.dig, div#center, div.hour, div.min, div.sec {
   position:absolute;
