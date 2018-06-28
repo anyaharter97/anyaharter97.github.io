@@ -37,6 +37,9 @@
 
 }
 
+#menu {
+  margin-top: 45px;
+}
 input[type="range"] {
    /* position: absolute; */
    /* top: 40%; */
@@ -48,31 +51,22 @@ input[type="range"] {
   /* margin-left: 15px; */
   float:left;
 }
-#lighttoggle {
+.brightnesstoggle {
   position:relative;
   /* top:-20px; */
   /* left:375px; */
   float:left;
   margin-right: 10px;
-}
-#darktoggle {
-  position:relative;
-  /* top:-20px; */
-  /* left:375px; */
-  float:left;
-  margin-right: 10px;
+  margin-left: 3px;
 }
 #colorform {
   color: #959595;
   margin-left: 35px;
 }
-#menu {
-  margin-top: 45px;
-}
-#menutoggle {
+.menutoggle {
   position: absolute;
   top:450px;
-  left:8px;
+  left:10px;
 }
 div.clock_container {
   align-items: center;

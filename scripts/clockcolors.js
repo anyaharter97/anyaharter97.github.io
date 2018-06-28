@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById("colorform").style.display = "none";
   document.getElementById("brightness").style.display = "none";
 
-  document.getElementById("menutoggle").addEventListener("click", showColorForm);
+  document.getElementById("darkmenu").addEventListener("click", showColorForm);
+  document.getElementById("lightmenu").addEventListener("click", showColorForm);
 
   function showColorForm() {
     var colorform = document.getElementById("colorform");
@@ -109,16 +110,20 @@ document.addEventListener('DOMContentLoaded', function () {
       document.documentElement.style.setProperty('--colordig', "#00000054");
       document.documentElement.style.setProperty('--opacity', "0.6");
       document.documentElement.style.setProperty('--filter', "saturate(100%)");
-      document.getElementById("darktoggle").style.display="block";
-      document.getElementById("lighttoggle").style.display="none";
+      document.getElementById("lighttoggle").style.display="block";
+      document.getElementById("darktoggle").style.display="none";
+      document.getElementById("lightmenu").style.display="block";
+      document.getElementById("darkmenu").style.display="none";
   }
 
   function makeDark() {
       document.documentElement.style.setProperty('--colordig', "#ffffff7d");
       document.documentElement.style.setProperty('--opacity', "0.5");
       document.documentElement.style.setProperty('--filter', "saturate(80%) brightness(140%)");
-      document.getElementById("lighttoggle").style.display="block";
-      document.getElementById("darktoggle").style.display="none";
+      document.getElementById("darktoggle").style.display="block";
+      document.getElementById("lighttoggle").style.display="none";
+      document.getElementById("darkmenu").style.display="block";
+      document.getElementById("lightmenu").style.display="none";
   }
 
 
