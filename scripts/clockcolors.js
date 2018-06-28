@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
   min.value = mincolor.trim();
   sec.value = seccolor.trim();
 
-  hour.addEventListener("change", changeHourColor);
-  min.addEventListener("change", changeMinColor);
-  sec.addEventListener("change", changeSecColor);
+  hour.addEventListener("input", changeHourColor);
+  min.addEventListener("input", changeMinColor);
+  sec.addEventListener("input", changeSecColor);
 
   function changeHourColor() {
       document.documentElement.style.setProperty('--colorh', hour.value);
@@ -45,25 +45,28 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById("darktoggle").addEventListener("click", changeDark);
 
   //light by default
-  var dark = false;
-  document.getElementById("darktoggle").style.display="block";
-  document.getElementById("lighttoggle").style.display="none";
+  changeLight();
+  // var dark = false;
+  // document.getElementById("darktoggle").style.display="block";
+  // document.getElementById("lighttoggle").style.display="none";
 
   function changeLight() {
       document.documentElement.style.setProperty('--colorbkg', "white");
+      document.documentElement.style.setProperty('--colordig', "#00000054");
       document.documentElement.style.setProperty('--opacity', "0.6");
       document.documentElement.style.setProperty('--filter', "saturate(100%)");
       document.getElementById("darktoggle").style.display="block";
-      this.style.display="none";
+      document.getElementById("lighttoggle").style.display="none";
       dark = false;
   }
 
   function changeDark() {
       document.documentElement.style.setProperty('--colorbkg', "black");
+      document.documentElement.style.setProperty('--colordig', "#ffffff7d");
       document.documentElement.style.setProperty('--opacity', "0.5");
       document.documentElement.style.setProperty('--filter', "saturate(80%) brightness(140%)");
       document.getElementById("lighttoggle").style.display="block";
-      this.style.display="none";
+      document.getElementById("darktoggle").style.display="none";
       dark = true;
   }
 

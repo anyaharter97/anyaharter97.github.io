@@ -3,11 +3,13 @@
 
   /* dark clock */
   /* --colorbkg: black;
+  --colordig: #ffffff7d;
   --opacity: 0.5;
   --filter: saturate(80%) brightness(140%); */
 
   /* light clock */
   --colorbkg: white;
+  --colordig: #00000054;
   --opacity: 0.6;
   --filter: saturate(100%);
 /*-----------------------------------*/
@@ -37,6 +39,7 @@
 
 #colorform {
   color: #959595;
+  margin-left: 15px;
 }
 #menu {
   margin-top: 25px;
@@ -89,7 +92,7 @@ body {
   background-color: var(--colorbkg);
 }
 div.dig {
-  color: #959595;
+  color: var(--colordig);
 }
 div.hour {
   background: var(--colorh);
@@ -107,7 +110,7 @@ div.sec {
   filter: var(--filter);
 }
 #center {
-  background: #959595;
+  background: var(--colordig);
   width: 6px;
   height: 6px;
   font-size: 6px;
