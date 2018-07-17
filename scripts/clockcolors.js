@@ -77,12 +77,15 @@ document.addEventListener('DOMContentLoaded', function () {
     backgroundcolor = backgroundcolor.trim();
     backgroundcolor = backgroundcolor.slice(7);
     backgroundcolor = "0x" + backgroundcolor;
-    background = parseInt(backgroundcolor)
+    var background = parseInt(backgroundcolor)
     brightness.value = background;
   }
 
   function setBackground(color) {
-    var background = "#000000" + color;
+    var backgroundcolor = getComputedStyle(document.documentElement).getPropertyValue('--colorbkg');
+    backgroundcolor = backgroundcolor.trim();
+    var backgroundprefix = backgroundcolor.slice(1,7);
+    var background = "#" + backgroundprefix + color;
     document.documentElement.style.setProperty('--colorbkg', background);
     adjustSlider();
     setBrightness();
