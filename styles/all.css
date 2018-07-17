@@ -31,9 +31,29 @@
   --colors: #f3e772; */
 
   /* forest clock */
-  --colorh: #3b7161;
+  /* --colorh: #3b7161;
   --colorm: #6cad9a;
-  --colors: #96c581;
+  --colors: #96c581; */
+
+  /* iced grape clock */
+  --colorh: #713b6f;
+  --colorm: #746cad;
+  --colors: #81b2c5;
+
+  /* desert clock */
+  /* --colorh: #d1a037;
+  --colorm: #ad6a36;
+  --colors: #ba4431; */
+
+  /* rose clock */
+  /* --colorh: #d17065;
+  --colorm: #ad5c90;
+  --colors: #985aba; */
+
+  /* aquatic clock */
+  /* --colorh: #4b62a8;
+  --colorm: #5fada6;
+  --colors: #72c573; */
 
 }
 

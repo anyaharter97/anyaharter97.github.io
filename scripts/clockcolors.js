@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
       document.documentElement.style.setProperty('--colors', sec.value);
   }
 
+// initialize background
   var initbackground = "e8";
   var dark = true;
 
