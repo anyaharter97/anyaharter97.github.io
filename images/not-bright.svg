@@ -1,41 +1,38 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet type="text/css" href="../styles/all.css"?>
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="28px" height="28px" viewBox="0 0 302.4 302.4" style="enable-background:new 0 0 302.4 302.4;" xml:space="preserve">
  <title>sun</title>
  <g>
   <title>Layer 1</title>
   <g id="svg_1">
-   <g id="svg_2">
-    <g id="svg_3">
-      <path fill="#ffffff7d" d="M204.8,97.6C191.2,84,172,75.2,151.2,75.2s-40,8.4-53.6,22.4c-13.6,13.6-22.4,32.8-22.4,53.6s8.8,40,22.4,53.6
-  			c13.6,13.6,32.8,22.4,53.6,22.4s40-8.4,53.6-22.4c13.6-13.6,22.4-32.8,22.4-53.6S218.8,111.2,204.8,97.6z M190.4,190.4
-  			c-10,10-24,16-39.2,16s-29.2-6-39.2-16s-16-24-16-39.2s6-29.2,16-39.2s24-16,39.2-16s29.2,6,39.2,16s16,24,16,39.2
-  			S200.4,180.4,190.4,190.4z"/>
-    </g>
-   </g>
+    <path fill="#ffffff7d" d="M204.8,97.6C191.2,84,172,75.2,151.2,75.2s-40,8.4-53.6,22.4c-13.6,13.6-22.4,32.8-22.4,53.6s8.8,40,22.4,53.6
+			c13.6,13.6,32.8,22.4,53.6,22.4s40-8.4,53.6-22.4c13.6-13.6,22.4-32.8,22.4-53.6S218.8,111.2,204.8,97.6z M190.4,190.4
+			c-10,10-24,16-39.2,16s-29.2-6-39.2-16s-16-24-16-39.2s6-29.2,16-39.2s24-16,39.2-16s29.2,6,39.2,16s16,24,16,39.2
+			S200.4,180.4,190.4,190.4z"/>
   </g>
-  <g id="svg_13"/>
-  <g id="svg_14"/>
-  <g id="svg_15"/>
-  <g id="svg_16"/>
-  <g id="svg_17"/>
-  <g id="svg_18"/>
-  <g id="svg_19"/>
-  <g id="svg_20"/>
-  <g id="svg_21"/>
-  <g id="svg_22"/>
-  <g id="svg_23"/>
-  <g id="svg_24"/>
-  <g id="svg_25"/>
-  <g id="svg_26"/>
-  <g id="svg_27"/>
-  <ellipse id="svg_38" ry="13.67956" rx="13.67956" cy="70.351786" cx="69.493419" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="#ffffff7d"/>
-<ellipse id="svg_41" ry="13.67956" rx="13.67956" cy="71.638466" cx="231.830776" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="#ffffff7d"/>
-<ellipse id="svg_42" ry="13.67956" rx="13.67956" cy="37.792312" cx="151.061544" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="#ffffff7d"/>
-<ellipse id="svg_43" ry="13.67956" rx="13.67956" cy="151.253848" cx="264.523083" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="#ffffff7d"/>
-<ellipse id="svg_44" ry="13.67956" rx="13.67956" cy="231.253858" cx="231.061551" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="#ffffff7d"/>
-<ellipse id="svg_45" ry="13.67956" rx="13.67956" cy="264.330778" cx="151.446158" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="#ffffff7d"/>
-<ellipse id="svg_46" ry="13.67956" rx="13.67956" cy="151.253848" cx="38.369243" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="#ffffff7d"/>
-<ellipse id="svg_47" ry="13.67956" rx="13.67956" cy="231.253858" cx="70.292301" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="#ffffff7d"/>
+  <g id="svg_13">
+    <path fill="#ffffff7d" d="M55.813859,70.351786a13.67956,13.67956 0 1,0 27.35912,0a13.67956,13.67956 0 1,0 -27.35912,0"/>
+  </g>
+  <g id="svg_14">
+    <path fill="#ffffff7d" d="M218.15121599999998,71.638466a13.67956,13.67956 0 1,0 27.35912,0a13.67956,13.67956 0 1,0 -27.35912,0"/>
+  </g>
+  <g id="svg_15">
+    <path fill="#ffffff7d" d="M137.381984,37.792312a13.67956,13.67956 0 1,0 27.35912,0a13.67956,13.67956 0 1,0 -27.35912,0"/>
+  </g>
+  <g id="svg_16">
+    <path fill="#ffffff7d" d="M250.84352299999998,151.253848a13.67956,13.67956 0 1,0 27.35912,0a13.67956,13.67956 0 1,0 -27.35912,0"/>
+  </g>
+  <g id="svg_17">
+    <path fill="#ffffff7d" d="M217.381991,231.253858a13.67956,13.67956 0 1,0 27.35912,0a13.67956,13.67956 0 1,0 -27.35912,0"/>
+  </g>
+  <g id="svg_18">
+    <path fill="#ffffff7d" d="M137.766598,264.330778a13.67956,13.67956 0 1,0 27.35912,0a13.67956,13.67956 0 1,0 -27.35912,0"/>
+  </g>
+  <g id="svg_19">
+    <path fill="#ffffff7d" d="M24.689682999999995,151.253848a13.67956,13.67956 0 1,0 27.35912,0a13.67956,13.67956 0 1,0 -27.35912,0"/>
+  </g>
+  <g id="svg_20">
+    <path fill="#ffffff7d" d="M56.61274099999999,231.253858a13.67956,13.67956 0 1,0 27.35912,0a13.67956,13.67956 0 1,0 -27.35912,0"/>
+  </g>
  </g>
 </svg>
