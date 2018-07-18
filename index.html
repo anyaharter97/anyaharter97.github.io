@@ -73,22 +73,32 @@
 
     <div id="menu">
 
-      <img src="images/menu-circular-button-dark.svg" class="menutoggle" id="darkmenu">
-      <img src="images/menu-circular-button-light.svg" class="menutoggle" id="lightmenu">
+      <div class="menutoggle" id="darkmenu">
+        <object type="image/svg+xml" data="images/menu-circular-button-dark.svg"></object>
+      </div>
+
+      <div class="menutoggle" id="lightmenu">
+        <object type="image/svg+xml" data="images/menu-circular-button-light.svg"></object>
+      </div>
 
     </div>
 
     <div id="brightnessmenu">
-      <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
-      <img src="images/sun.svg" class="brightnesstoggle" id="lighttoggle">
 
-      <!-- <object type="image/svg+xml" data="images/sun.svg" class="brightnesstoggle" id="lighttoggle"></object> -->
-      <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
-      <img src="images/not-bright.svg" class="brightnesstoggle" id="darktoggle">
-      <!-- <object type="image/svg+xml" data="images/not-bright.svg" class="brightnesstoggle" id="darktoggle"></object> -->
-      <div>
+      <div class="brightnesstoggle" id="lighttoggle">
+        <object type="image/svg+xml" data="images/bright.svg"></object>
+        <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
+      </div>
+
+      <div class="brightnesstoggle" id="darktoggle">
+        <object type="image/svg+xml" data="images/notbright.svg"></object>
+        <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
+      </div>
+
+      <div id="brightnessslider">
         <input id="brightness" type="range" min="1" max="255" value="0">
       </div>
+
     </div>
 
   </div>

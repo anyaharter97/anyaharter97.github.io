@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', function () {
   function showColorForm() {
     var colorform = document.getElementById("colorform");
     if (colorform.style.display === "none") {
-        colorform.style.display = "block";
+      colorform.style.display = "block";
     } else {
-        colorform.style.display = "none";
+      colorform.style.display = "none";
     }
   }
 
@@ -32,15 +32,15 @@ document.addEventListener('DOMContentLoaded', function () {
   sec.addEventListener("input", changeSecColor);
 
   function changeHourColor() {
-      document.documentElement.style.setProperty('--colorh', hour.value);
+    document.documentElement.style.setProperty('--colorh', hour.value);
   }
 
   function changeMinColor() {
-      document.documentElement.style.setProperty('--colorm', min.value);
+    document.documentElement.style.setProperty('--colorm', min.value);
   }
 
   function changeSecColor() {
-      document.documentElement.style.setProperty('--colors', sec.value);
+    document.documentElement.style.setProperty('--colors', sec.value);
   }
 
 // initialize background
@@ -93,16 +93,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function decimalToHex(d) {
     var hex = Number(d).toString(16);
-
     while (hex.length < 2) {
         hex = "0" + hex;
     }
-
     return hex;
   }
 
   function adjustBrightness() {
-    if (this.value < 127.5) {
+    if (this.value < 128) {
       dark = false;
     } else {
       dark = true;
@@ -111,23 +109,33 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function makeLight() {
-      document.documentElement.style.setProperty('--colordig', "#00000054");
-      document.documentElement.style.setProperty('--opacity', "0.6");
-      document.documentElement.style.setProperty('--filter', "saturate(100%)");
-      document.getElementById("lighttoggle").style.display="block";
-      document.getElementById("darktoggle").style.display="none";
-      document.getElementById("lightmenu").style.display="block";
-      document.getElementById("darkmenu").style.display="none";
+    var backgroundcolor = getComputedStyle(document.documentElement).getPropertyValue('--colorbkg');
+    backgroundcolor = backgroundcolor.trim();
+    var backgroundprefix = backgroundcolor.slice(1,7);
+    document.documentElement.style.setProperty('--colordig', "#" + backgroundprefix + "54");
+    document.documentElement.style.setProperty('--opacity', "0.6");
+    document.documentElement.style.setProperty('--filter', "saturate(100%)");
+    document.getElementById("darktoggle").style.display="none";
+    document.getElementById("lighttoggle").style.display="block";
+    document.getElementById("config").style.setProperty("color", "#" + backgroundprefix + "54");
+    document.getElementById("lightmenu").style.display="block";
+    document.getElementById("darkmenu").style.display="none";
+    // document.querySelector("path").style.setProperty('fill', "purple");
   }
 
   function makeDark() {
-      document.documentElement.style.setProperty('--colordig', "#ffffff7d");
-      document.documentElement.style.setProperty('--opacity', "0.5");
-      document.documentElement.style.setProperty('--filter', "saturate(80%) brightness(140%)");
-      document.getElementById("darktoggle").style.display="block";
-      document.getElementById("lighttoggle").style.display="none";
-      document.getElementById("darkmenu").style.display="block";
-      document.getElementById("lightmenu").style.display="none";
+    var backgroundcolor = getComputedStyle(document.documentElement).getPropertyValue('--colorbkg');
+    backgroundcolor = backgroundcolor.trim();
+    var backgroundprefix = backgroundcolor.slice(1,7);
+    document.documentElement.style.setProperty('--colordig', "#ffffff7d");
+    document.documentElement.style.setProperty('--opacity', "0.5");
+    document.documentElement.style.setProperty('--filter', "saturate(80%) brightness(140%)");
+    document.getElementById("lighttoggle").style.display="none";
+    document.getElementById("darktoggle").style.display="block";
+    document.getElementById("config").style.setProperty("color", "#ffffff7d");
+    document.getElementById("darkmenu").style.display="block";
+    document.getElementById("lightmenu").style.display="none";
+    // document.querySelector("path").style.setProperty('fill', "blue");
   }
 
 
