@@ -1,11 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+  // toggle debug mode
+  var debug = false;
+
   // initialize background
-  var background = "#000000";
-  var bkgopac = "e8";
-  document.documentElement.style.setProperty('--colorbkg', background  + bkgopac);
+  var bkgcolor;
+  var bkgopac;
+  getBackground();
   var dark = true;
-  setBackground(bkgopac);
+  setBackground(bkgcolor, bkgopac);
 
   document.getElementById("colorform").style.display = "none";
   document.getElementById("brightness").style.display = "none";
@@ -29,13 +32,11 @@ document.addEventListener('DOMContentLoaded', function () {
   var hourcolor = getComputedStyle(document.documentElement).getPropertyValue('--colorh');
   var mincolor = getComputedStyle(document.documentElement).getPropertyValue('--colorm');
   var seccolor = getComputedStyle(document.documentElement).getPropertyValue('--colors');
-  var bkgcolor = getComputedStyle(document.documentElement).getPropertyValue('--colorbkg');
 
   hour.value = hourcolor.trim();
   min.value = mincolor.trim();
   sec.value = seccolor.trim();
-  bkg.value = bkgcolor.trim();
-  var bkgopac = bkgcolor.slice(7);
+  bkg.value = "#" + bkgcolor;
 
   hour.addEventListener("input", changeHourColor);
   min.addEventListener("input", changeMinColor);
@@ -55,16 +56,19 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function changeBkgColor() {
-    document.documentElement.style.setProperty('--colorbkg', bkg.value + bkgopac);
+    var backgroundcolor = (bkg.value).trim();
+    backgroundcolor = backgroundcolor.slice(1,7);
+    setBackground(backgroundcolor, bkgopac);
   }
-
 
   document.getElementById("lighttoggle").addEventListener("click", toggleBrightness);
   document.getElementById("darktoggle").addEventListener("click", toggleBrightness);
   document.getElementById("brightness").addEventListener("input", adjustBrightness);
 
   function toggleBrightness() {
-    console.log("toggle");
+    if (debug){
+      console.log("toggleBrightness");
+    }
     var slider = document.getElementById("brightness");
     if (slider.style.display === "none") {
         slider.style.display = "block";
@@ -74,6 +78,9 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function setBrightness(){
+    if (debug){
+      console.log("setBrightness");
+    }
     if (dark) {
       makeDark();
     } else {
@@ -81,24 +88,55 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  function adjustSlider() {
-    var brightness = document.getElementById("brightness");
-    var backgroundcolor = getComputedStyle(document.documentElement).getPropertyValue('--colorbkg');
-    backgroundcolor = backgroundcolor.trim();
-    backgroundcolor = backgroundcolor.slice(7);
-    backgroundcolor = "0x" + backgroundcolor;
-    var background = parseInt(backgroundcolor)
-    brightness.value = background;
+  function getBrightness() {
+    if (debug){
+      console.log("getBrightness");
+    }
+    var backgroundopac = "0x" + bkgopac;
+    var opac = parseInt(backgroundopac);
+    if (opac < 128) {
+      if (debug){
+        console.log("false");
+      }
+      return false;
+    } else {
+      if (debug){
+        console.log("true");
+      }
+      return true;
+    }
   }
 
-  function setBackground(color) {
-    bkgopac = color;
+  function getBackground(){
+    if (debug){
+      console.log("getBackground");
+    }
     var backgroundcolor = getComputedStyle(document.documentElement).getPropertyValue('--colorbkg');
     backgroundcolor = backgroundcolor.trim();
-    var backgroundprefix = backgroundcolor.slice(1,7);
-    var background = "#" + backgroundprefix + color;
-    document.documentElement.style.setProperty('--colorbkg', background);
+    bkgcolor = backgroundcolor.slice(1,7);
+    bkgopac = backgroundcolor.slice(7);
+  }
+
+  function adjustSlider() {
+    if (debug){
+      console.log("adjustSlider");
+    }
+    var brightness = document.getElementById("brightness");
+    getBackground();
+    backgroundopac = "0x" + bkgopac;
+    var opac = parseInt(backgroundopac);
+    brightness.value = opac;
+  }
+
+  function setBackground(color, opac) {
+    if (debug){
+      console.log("setBackground");
+    }
+    bkgcolor = color;
+    bkgopac = opac;
+    document.documentElement.style.setProperty('--colorbkg', "#" + bkgcolor + bkgopac);
     adjustSlider();
+    dark = getBrightness();
     setBrightness();
   }
 
@@ -111,31 +149,30 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function adjustBrightness() {
-    if (this.value < 128) {
-      dark = false;
-    } else {
-      dark = true;
+    if (debug){
+      console.log("adjustBrightness");
     }
-    setBackground(decimalToHex(this.value));
+    setBackground(bkgcolor, decimalToHex(this.value));
   }
 
   function makeLight() {
-    var backgroundcolor = getComputedStyle(document.documentElement).getPropertyValue('--colorbkg');
-    backgroundcolor = backgroundcolor.trim();
-    var backgroundprefix = backgroundcolor.slice(1,7);
-    document.documentElement.style.setProperty('--colordig', "#" + backgroundprefix + "54");
+    if (debug){
+      console.log("makeLight");
+    }
+    getBackground();
+    document.documentElement.style.setProperty('--colordig', "#" + bkgcolor + "54");
     document.documentElement.style.setProperty('--opacity', "0.6");
     document.documentElement.style.setProperty('--filter', "saturate(100%)");
     document.getElementById("darktoggle").style.display="none";
     document.getElementById("lighttoggle").style.display="block";
-    document.getElementById("bright").setAttribute("fill", "#" + backgroundprefix + "54");
-    document.getElementById("menutoggle").setAttribute("fill", "#" + backgroundprefix + "54");
+    document.getElementById("bright").setAttribute("fill", "#" + bkgcolor + "54");
+    document.getElementById("menutoggle").setAttribute("fill", "#" + bkgcolor + "54");
   }
 
   function makeDark() {
-    var backgroundcolor = getComputedStyle(document.documentElement).getPropertyValue('--colorbkg');
-    backgroundcolor = backgroundcolor.trim();
-    var backgroundprefix = backgroundcolor.slice(1,7);
+    if (debug){
+      console.log("makeDark");
+    }
     document.documentElement.style.setProperty('--colordig', "#ffffff7d");
     document.documentElement.style.setProperty('--opacity', "0.5");
     document.documentElement.style.setProperty('--filter', "saturate(80%) brightness(140%)");
@@ -144,8 +181,5 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("notbright").setAttribute("fill", "#ffffff7d");
     document.getElementById("menutoggle").setAttribute("fill", "#ffffff7d");
   }
-
-
-
 
 });
