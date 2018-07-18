@@ -60,14 +60,10 @@ svg {
   width: 25px;
   height: 25px;
 }
-path {
-  fill: blue;
-}
 #config {
   overflow: hidden;
-  color: blue;
 }
-.menutoggle {
+#menutoggle {
   background-color: none;
   float:left;
   margin: 0px 12.7655px;

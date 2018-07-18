@@ -3,8 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById("colorform").style.display = "none";
   document.getElementById("brightness").style.display = "none";
 
-  document.getElementById("darkmenu").addEventListener("click", showColorForm);
-  document.getElementById("lightmenu").addEventListener("click", showColorForm);
+  document.getElementById("menu").addEventListener("click", showColorForm);
 
   function showColorForm() {
     var colorform = document.getElementById("colorform");
@@ -117,10 +116,8 @@ document.addEventListener('DOMContentLoaded', function () {
     document.documentElement.style.setProperty('--filter', "saturate(100%)");
     document.getElementById("darktoggle").style.display="none";
     document.getElementById("lighttoggle").style.display="block";
-    document.getElementById("config").style.setProperty("color", "#" + backgroundprefix + "54");
-    document.getElementById("lightmenu").style.display="block";
-    document.getElementById("darkmenu").style.display="none";
-    // document.querySelector("path").style.setProperty('fill', "purple");
+    document.getElementById("bright").setAttribute("fill", "#" + backgroundprefix + "54");
+    document.getElementById("menutoggle").setAttribute("fill", "#" + backgroundprefix + "54");
   }
 
   function makeDark() {
@@ -132,10 +129,8 @@ document.addEventListener('DOMContentLoaded', function () {
     document.documentElement.style.setProperty('--filter', "saturate(80%) brightness(140%)");
     document.getElementById("lighttoggle").style.display="none";
     document.getElementById("darktoggle").style.display="block";
-    document.getElementById("config").style.setProperty("color", "#ffffff7d");
-    document.getElementById("darkmenu").style.display="block";
-    document.getElementById("lightmenu").style.display="none";
-    // document.querySelector("path").style.setProperty('fill', "blue");
+    document.getElementById("notbright").setAttribute("fill", "#ffffff7d");
+    document.getElementById("menutoggle").setAttribute("fill", "#ffffff7d");
   }
 
 
