@@ -56,6 +56,9 @@
   --colors: #72c573; */
 
 }
+body {
+  background-color: var(--colorbkg);
+}
 svg {
   width: 25px;
   height: 25px;
@@ -120,9 +123,6 @@ div.dig {
   font-size:36px;
   text-align:center;
   padding-top:10px
-}
-body {
-  background-color: var(--colorbkg);
 }
 div.dig {
   color: var(--colordig);
